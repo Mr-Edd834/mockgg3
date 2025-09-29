@@ -169,8 +169,8 @@ const Home = () => {
         </div>
       </div>
       
-      {/* Wavy line separator */}
-      <div className="wavy-separator"></div>
+      {/* Wavy line separator
+      <div className="wavy-separator"></div> */}
       
       {/* White section with additional cards */}
       <div className="white-section" ref={whiteSectionRef}>
