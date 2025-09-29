@@ -24,7 +24,7 @@ const Sidebar = ({ onToggle }) => {
    
     { id: "order-history", icon: <ClipboardList size={24} />, label: "Order History",path:"/orderhistory" },
   
-    { id: "setting", icon: <Settings size={24} />, label: "Setting",path:"/profile" },
+    { id: "setting", icon: <Settings size={24} />, label: "Settings",path:"/profile" },
   ];
 
   const toggleSidebar = () => {
