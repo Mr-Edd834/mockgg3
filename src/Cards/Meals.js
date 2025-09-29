@@ -25,7 +25,7 @@ function MealsCard(){
             </div>
             <div className='meals-card-description'>Get your favorite pizza big at a discount today at GoGrub.</div>
                <hr className='meals-horizontal-line'></hr>
-             <div className='meals-card-price'> <h3>Ksh 2000 </h3></div>
+             <div className='meals-card-price'> <b>Ksh 2000 </b></div>
             <div className='meals-icons'>
             <Heart size={16} colour="dark-gray"/>
             <div className='meals-counter'>

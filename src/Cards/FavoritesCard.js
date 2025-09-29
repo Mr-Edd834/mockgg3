@@ -27,7 +27,7 @@ function FavoritesCard(){
             </div>
             <div className='favorites-card-description'>Get your favorite pizza big at a discount today at GoGrub.</div>
                <hr className='favorites-horizontal-line'></hr>
-             <div className='favorites-card-price'> <h3>Ksh 2000 </h3></div>
+             <div className='favorites-card-price'> <b>Ksh 2000 </b></div>
             <div className='favorites-icons'>
             <Heart size={16} colour="dark-gray"/>
             <div className='favorites-counter'>
