@@ -12,7 +12,15 @@ function Delightmeals() {
     backgroundImage: "url('https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkfGVufDB8fDB8fHww')"
   };
   const [quantity, setQuantity] = useState(0);
-
+  const [favorites, setFavorites] = useState({
+    card1: false,
+    card2: false,
+    card3: false,
+    card4: false,
+    card5: false,
+    card6: false
+  });
+  
   const increase = () => {
 setQuantity((prev) => prev + 1);
 };
@@ -20,6 +28,12 @@ setQuantity((prev) => prev + 1);
 const decrease = () => {
 setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
 };
+const toggleFavorite = (cardId) => {
+   setFavorites((prev) => ({
+     ...prev,
+     [cardId]: !prev[cardId]
+   }));
+ };
 
   return (
     <>
@@ -36,7 +50,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 500 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+             size={16} 
+             fill={favorites.card1 ? "#374151" : "none"}
+             stroke={favorites.card1 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card1')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card1 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
@@ -59,7 +83,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 200 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+               <Heart 
+             size={16} 
+             fill={favorites.card2 ? "#374151" : "none"}
+             stroke={favorites.card2 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card2')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card2 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
@@ -82,7 +116,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 300 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+             size={16} 
+             fill={favorites.card3 ? "#374151" : "none"}
+             stroke={favorites.card3 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card3')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card3 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
@@ -105,7 +149,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 1000 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+             size={16} 
+             fill={favorites.card4 ? "#374151" : "none"}
+             stroke={favorites.card4 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card4')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card4 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
@@ -128,7 +182,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 700 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+             size={16} 
+             fill={favorites.card5 ? "#374151" : "none"}
+             stroke={favorites.card5 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card5')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card5 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
@@ -151,7 +215,17 @@ setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 3000 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+             size={16} 
+             fill={favorites.card6 ? "#374151" : "none"}
+             stroke={favorites.card6 ? "#374151" : "#9CA3AF"}
+             onClick={() => toggleFavorite('card6')}
+             style={{ 
+               cursor: 'pointer',
+               color: favorites.card6 ? "#374151" : "#9CA3AF",
+               transition: 'all 0.3s ease'
+             }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>

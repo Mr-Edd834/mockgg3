@@ -6,6 +6,7 @@ import { Plus, Minus } from "lucide-react";
 
 function MealsCard(){
  const [quantity, setQuantity] = useState(0);
+ const [isFavorited, setIsFavorited] = useState(false);
 
       const increase = () => {
     setQuantity((prev) => prev + 1);
@@ -13,6 +14,10 @@ function MealsCard(){
 
   const decrease = () => {
     setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+  };
+
+  const toggleFavorite = () => {
+    setIsFavorited((prev) => !prev);
   };
 
     return(
@@ -27,7 +32,17 @@ function MealsCard(){
                <hr className='meals-horizontal-line'></hr>
              <div className='meals-card-price'> <b>Ksh 2000 </b></div>
             <div className='meals-icons'>
-            <Heart size={16} colour="dark-gray"/>
+            <Heart 
+              size={16} 
+              fill={isFavorited ? "#374151" : "none"}
+              stroke={isFavorited ? "#374151" : "#9CA3AF"}
+              onClick={toggleFavorite}
+              style={{ 
+                cursor: 'pointer',
+                color: isFavorited ? "#374151" : "#9CA3AF",
+                transition: 'all 0.3s ease'
+              }}
+            />
             <div className='meals-counter'>
                 <button className='meals-counter-button' onClick={decrease}><Minus size={16}/></button>
                  <span className="quantity">{quantity}</span>
