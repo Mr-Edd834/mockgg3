@@ -20,14 +20,14 @@
 
 /* Horizontal layout with spacing */
 .cards-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 50px;
-  flex-wrap: wrap;
-  grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
   row-gap: 100px;
   margin-top: 50px;
+  max-width: 900px; /* Limit the maximum width to prevent too many columns */
 }
 
 #welcome-message  {
