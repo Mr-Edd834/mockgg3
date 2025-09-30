@@ -10,13 +10,19 @@ function Snacks() {
   return (
     <>
     <div className="full-page-background" style={checkoutBackgroundStyle}></div>
-    <div className='page-content-snacks'>
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
+    <div className="page-content">
+      <div className="snacks-cards-wrapper">
+        <div className="slide-top">
+          <div className='page-content-snacks'>
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+          </div>
+        </div>
+      </div>
     </div>
     </>
   );

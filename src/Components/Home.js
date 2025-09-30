@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 import "./Home.css";
 import {MapPin} from 'lucide-react';
+import {LogIn} from 'lucide-react';
 import SplitText from "../Animations/SplitText";
 import ScrollFloat from '../Animations/ScrollFloat';
 
@@ -71,6 +72,15 @@ const Home = () => {
   return (
     <>
       <div className="full-page-background" style={homeBackgroundStyle}></div>
+      
+      {/* Login icon in top right corner */}
+      <div className="login-icon-container">
+        <LogIn 
+          className="login-icon" 
+          size={26} 
+          onClick={() => navigate('/login')}
+        />
+      </div>
      
  
   <SplitText
@@ -88,11 +98,12 @@ const Home = () => {
     onLetterAnimationComplete={handleAnimationComplete}
   />
   
-      {/* <h1 id='welcome-message'>Welcome Mr.Edd,</h1> */}
+      {/* <h1 id='welcome-message'>Welcome Mr.Edd,</h1> */} 
       <div className="page-content">
-    
+      
       <div className="cards-wrapper">
         <div className="slide-top">
+       
       <div className="input-wrapper">
         <MapPin className="input-icon" size={20} />  
 <input type="text" placeholder="Enter your location" />

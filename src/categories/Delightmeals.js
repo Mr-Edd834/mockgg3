@@ -38,9 +38,11 @@ const toggleFavorite = (cardId) => {
   return (
     <>
     <div className="full-page-background" style={checkoutBackgroundStyle}></div>
-    <div className='page-content-delightmeals'>
-    
-    <div className="MealsCard">
+    <div className="page-content">
+      <div className="delightmeals-cards-wrapper">
+        <div className="slide-top">
+          <div className='page-content-delightmeals'>
+            <div className="MealsCard">
         
             <img className='meals-card-image' src="https://images.unsplash.com/photo-1613082487279-1e16f1e81505?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHx8MA%3D%3D" alt=""></img>
             <div className='meals-card-content'>
@@ -236,9 +238,11 @@ const toggleFavorite = (cardId) => {
             <div className='meals-order-button'>
                <button>Grub it!</button>
             </div>
+            </div>
+          </div>
         </div>
-        
       </div>
+    </div>
     </>
   );
 }

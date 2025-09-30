@@ -10,13 +10,19 @@ function Fastfood() {
   return (
     <>
     <div className="full-page-background" style={checkoutBackgroundStyle}></div>
-    <div className='page-content-fastfood'>
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
-      <MealsCard />
+    <div className="page-content">
+      <div className="fastfood-cards-wrapper">
+        <div className="slide-top">
+          <div className='page-content-fastfood'>
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+            <MealsCard />
+          </div>
+        </div>
+      </div>
     </div>
     </>
   );
